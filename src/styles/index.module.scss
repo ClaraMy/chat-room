@@ -1,0 +1,53 @@
+.content {
+    display: flex;
+    width: 80%;
+    height: 100vh;
+    padding: 2.5rem 2.5rem 2.5rem 4rem;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    background-color: #FCF0E1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    color: #AB5D46;
+    font-size: 3rem;
+}
+
+.content__chat {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50vw;
+}
+
+.messages {
+    height: 65vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    // margin-top: auto;
+    gap: 1.5rem;
+
+    // ::-webkit-scrollbar-thumb {
+    //     background: red; 
+    //     border-radius: 10px;
+    //   }
+      
+}
+
+// general styles
+.flex {
+    display: flex;
+}
+

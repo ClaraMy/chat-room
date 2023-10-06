@@ -1,0 +1,65 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.title {
+    color: #AB5D46;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    margin: 0;
+}
+
+.h2 {
+    text-align: center;
+}
+
+.h {
+    margin: 0;
+
+    color: #AB5D46;
+    font-size: 4rem;
+    font-weight: 700;
+    
+    transform: rotate(-10.953deg);
+    position: relative;
+    bottom: 7vh;
+    left: 1vw;
+}
+
+.error {
+    color: red;
+}
+
+.input {
+    display: flex;
+    width: 20vw;
+    padding: 0.5rem 1rem;
+    align-items: center;
+
+    border-radius: 6.25rem;
+    background-color: white;
+    border: none;
+
+    &::placeholder {
+        font-size: 1rem;
+    }
+}
+
+
+// class générique
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .flex_column {
+        flex-direction: column;
+    }
+}

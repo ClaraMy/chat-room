@@ -1,0 +1,10 @@
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFE5C0;
+    margin: 0;
+    overflow: hidden;
+}
