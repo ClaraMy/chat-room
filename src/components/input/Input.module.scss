@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap');
+@import '../../styles/variables';
+
 .input {
     display: flex;
-    padding: 0.5rem 1rem;
+    padding: var(--spacer-xxs, 8px) var(--spacer-xs, 16px);
     align-items: center;
-    gap: 0.5rem;
-    flex: 1 0 0;
+    gap: var(--spacer-xxs, 8px);
+    align-self: stretch;
 
     width: 100%;
-    border-radius: 6.25rem;
-    border-color: transparent;
-    background-color: #FFF;
+
+    border-radius: 8px;
+    border: none;
+    background-color: var(--white, #FFFFFF);
+
+    font-family: 'Playpen Sans', cursive;
 }

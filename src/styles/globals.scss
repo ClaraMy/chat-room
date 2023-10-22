@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap');
+@import './variables';
+
 *, *::after, *::before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #FFE5C0;
+    background: #FDF7F4;
     margin: 0;
     overflow: hidden;
+    font-family: 'Playpen Sans', cursive;
+}
+
+main {
+    display: flex;
+    padding: var(--spacer-m, 40px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacer-s, 24px);
+    width: 100%;
 }

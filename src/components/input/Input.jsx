@@ -1,13 +1,6 @@
 import { socket } from "@/utils/socket";
 import { useRef } from "react";
 import s from "./Input.module.scss";
-import { Gaegu } from 'next/font/google'
-
-const gaegu = Gaegu({
-    weight: '400',
-    subsets: ['latin'],
-    // display: 'swap',
-})
 
 const Input = ({selectedUser, setSelectedUser}) => {
     const inputRef = useRef();
@@ -48,7 +41,7 @@ const Input = ({selectedUser, setSelectedUser}) => {
         <>
             <input 
                 ref={inputRef} 
-                className={`${s.input} ${gaegu.className}`} 
+                className={s.input} 
                 type="text" 
                 onKeyDown={onKeyDown}
                 placeholder="type a message..."

@@ -6,7 +6,7 @@ import Input from "@/components/input/Input";
 import Commands from "@/components/commands/Commands";
 import Notification from "@/components/notification/Notification";
 import s from "@/styles/index.module.scss";
-import NavBar from "@/components/navbar/NavBar";
+import UserList from "@/components/userlist/UserList";
 import Image from 'next/image'
 import Message from "@/components/message/Message";
 
@@ -190,14 +190,10 @@ const Home = () => {
       }, [selectedUser])
 
     return( 
-    <div className={s.flex}>
-        <NavBar
-          users={users} 
-          setUsers={setUsers}
-          selectedUser={selectedUser}
-          setSelectedUser={setSelectedUser}
-        />
-
+      <>
+        <h1 className={s.title}>
+          study session // (date)
+        </h1>
         {error && (
           <Notification 
           title = {error.title}
@@ -205,53 +201,65 @@ const Home = () => {
           onClose = {() => {setError(null)}}
         />
         )}
-        
+
+        <div className={s.main}>
+          <UserList
+              users={users}
+              setUsers={setUsers}
+              selectedUser={selectedUser}
+              setSelectedUser={setSelectedUser}
+            />
+
         <div className={s.content}>
-          <div className={s.header}>
-            <h1 className={s.header__title}>
-              { selectedUser 
+          <div className={s.content__title}>
+            <h2>
+              { selectedUser
                 ? selectedUser.username
-                : 'public room'
-               }
-            </h1>
-            <div className={s.profile}>
-              <Image
-                  src="/profile/cat-orange-angry.svg"
-                  width={76}
-                  height={76}
-                  alt="Angry Orange Cat Profile"
-              />
-            </div>
+                : '🌿 General room'
+                }
+            </h2>
           </div>
-          <div className={s.content__chat}>
-            <div ref={viewerRef} className={s.messages}>
-                { selectedUser
-                  ? selectedUser.messages.map((message, key) => {
-                      return (
+          <div className={s.content__infos}>
+            <div className={s.chat}>
+              <div ref={viewerRef} className={s.messages}>
+                  { selectedUser
+                    ? selectedUser.messages.map((message, key) => {
+                        return (
+                            <Message
+                              key={key}
+                              username={message.username}
+                              content={message.content}
+                              fromSelf={message.from === socket.userID}
+                            />
+                        );
+                      })
+                    : messages.map((message, key) => {
+                        return (
                           <Message
                             key={key}
                             username={message.username}
                             content={message.content}
                             fromSelf={message.from === socket.userID}
                           />
-                      );
-                    })
-                  : messages.map((message, key) => {
-                      return (
-                        <Message
-                          key={key}
-                          username={message.username}
-                          content={message.content}
-                          fromSelf={message.from === socket.userID}
-                        />
-                      );
-                  })}
+                        );
+                    })}
+              </div>
+              <div>
+                <Input
+                  selectedUser={selectedUser}
+                  setSelectedUser={setSelectedUser}
+                />
+              </div>
             </div>
-            <div>
-              <Input
-                selectedUser={selectedUser}
-                setSelectedUser={setSelectedUser}
-              />
+            <div className={s.sidebar}>
+              {/* en faire un composant */}
+              <div className={s.clock}>
+                
+              </div>
+              {/* en faire un composant */}
+              <div className={s.profile}>
+
+              </div>
             </div>
           </div>
         </div>
@@ -265,7 +273,9 @@ const Home = () => {
         
         <Commands/>
 
-    </div>);
+    </div>
+      </>
+    );
 };
 
 export default Home;
