@@ -13,7 +13,9 @@ const Message = ({ username, content, fromSelf }) => {
     }, [])
     return (
         <div ref={messageRef} className={`${s.message} ${fromSelf ? s.message__me : ""}`}>
-            {username} said {content}
+            <div className={`${s.message__container} ${fromSelf ? s.message__container__me : ""}`}>
+                <p className={s.message__username}>{username}</p> <p className={s.message__content}>{content}</p>
+            </div>
         </div>
     )
         

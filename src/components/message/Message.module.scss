@@ -1,10 +1,37 @@
 .message {
-    transform: translateX(-100px);
-    opacity: 0;
+    // transform: translateX(-100px);
+    // opacity: 0;
+    display: flex;
+    width: 100%;
 
     &__me {
-        text-align: right;
-        padding: 0 2rem ;
-        transform: translateX(100px);
+        // text-align: right;
+        // padding: 0 2rem ;
+        // transform: translateX(100px);
+        justify-content: flex-end;
     }
+}
+
+.message__container {
+    display: flex;
+    max-width: 90%;
+    padding: var(--spacer-xxs, 8px) var(--spacer-xs, 16px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+
+    border-radius: 8px;
+    background-color: var(--white, #FFFFFF);
+
+    &__me {
+        align-items: flex-end;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.message__username {
+    font-weight: 700;
 }
