@@ -4,6 +4,7 @@ import { socket } from "@/utils/socket";
 import { useEffect, useRef, useState } from "react";
 import Input from "@/components/input/Input";
 import Timer from "@/components/timer/timer";
+import Profile from "@/components/profile/Profile";
 import Commands from "@/components/commands/Commands";
 import Notification from "@/components/notification/Notification";
 import s from "@/styles/index.module.scss";
@@ -253,12 +254,8 @@ const Home = () => {
               </div>
             </div>
             <div className={s.sidebar}>
-              {/* en faire un composant */}
               <Timer/>
-              {/* en faire un composant */}
-              <div className={s.profile}>
-
-              </div>
+              <Profile/>
             </div>
           </div>
         </div>
