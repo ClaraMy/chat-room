@@ -1,13 +1,11 @@
 .user {
     cursor: pointer;
     display: flex;
-    padding: 0.25rem 0.5rem;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--spacer-xxs, 8px);
+    
     align-self: stretch;
-    color: #AB5D46;
     opacity: 0;
-    font-size: 1.25rem;
 
     transform: translate(-100px);
     transition: color 0.5s, background-color 0.5s;
@@ -18,9 +16,11 @@
 }
 
 .notification {
-    display: inline-block;
-    background-color: #AB5D46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: var(--secondary-color, #DDD3D4);
     border-radius: 100px;
-    padding: 0 0.5rem;
-    color: white;
+    font-size: 0.75rem;
 }

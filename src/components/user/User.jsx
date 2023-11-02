@@ -29,9 +29,9 @@ const User = ({ index, user, selectedUser, setSelectedUser, resetNotification })
             {user.username} 
 
             {user.hasNewMessages === true ? (
-                <span className={s.notification}>
+                <div className={s.notification}>
                     !
-                </span>
+                </div>
             ) : null}
         </div>
     )

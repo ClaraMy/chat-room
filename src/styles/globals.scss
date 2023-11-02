@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #FDF7F4;
+    background-color: var(--main-color, #FDF7F4);
     margin: 0;
     overflow: hidden;
     font-family: 'Playpen Sans', cursive;
