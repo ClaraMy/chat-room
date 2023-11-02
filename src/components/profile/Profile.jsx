@@ -5,10 +5,6 @@ const Profile = () => {
     // function to show up the controls when you click on your name profile
     const [controlsVisible, setControlsVisible] = useState(false);
 
-    const visible = () => {
-        setControlsVisible(!controlsVisible);
-    };
-
     return (
         <div className={s.container}>
             {controlsVisible &&
@@ -17,7 +13,12 @@ const Profile = () => {
                 <p>log out</p>
             </div>
             }
-            <div className={s.profile} onClick={visible}>
+            <div 
+                className={s.profile} 
+                onClick={() => {
+                    setControlsVisible(!controlsVisible);
+                }}
+            >
                 <p>name</p>
             </div>
         </div>
