@@ -26,6 +26,7 @@ const User = ({ index, user, selectedUser, setSelectedUser, resetNotification })
                 resetNotification(user);
             }}
         > 
+            {selectedUser?.userID === user.userID ? "> " : "" }
             {user.username} 
 
             {user.hasNewMessages === true ? (

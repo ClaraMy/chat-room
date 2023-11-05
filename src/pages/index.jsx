@@ -21,15 +21,15 @@ const Home = () => {
     const {push} = useRouter();
 
     const onSession = ({ sessionID, userID }) => {
-        // attach the session ID to the next reconnection attempts
-        socket.auth = { sessionID };
-        // store it in the localStorage
-        localStorage.setItem("sessionID", sessionID);
-        // save the ID of the user
-        socket.userID = userID;
+      // attach the session ID to the next reconnection attempts
+      socket.auth = { sessionID };
+      // store it in the localStorage
+      localStorage.setItem("sessionID", sessionID);
+      // save the ID of the user
+      socket.userID = userID;
 
-        localStorage.clear("error");
-      };
+      localStorage.clear("error");
+    };
     
 
       const onMessage = (message) => {

@@ -34,7 +34,8 @@ const UserList = ({users, setUsers, selectedUser, setSelectedUser}) => {
                 className={`${s.user} ${selectedUser ? "" : s.user__active }`}
                 onClick={() => setSelectedUser(null)}
             > 
-                General room
+                {selectedUser ? "" : "> " }
+                🌿 General room
             </div>
             {users.map((user, index) => {
                 return user.connected === true ? (
