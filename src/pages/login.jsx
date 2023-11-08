@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import s from "@/styles/login.module.scss";
 import { Gaegu } from 'next/font/google'
-import Image from 'next/image'
 
 const gaegu = Gaegu({
     weight: '400',
@@ -44,23 +43,22 @@ const Login = () => {
 
     return (
     <div className={s.main}>
-        {/* <h1 className={`${getClassName}`}>Login Page</h1> */}
-        <div className={s.flex_column}>
-            <h2 className={s.h2}>Enter your username</h2>
+        {/* trouver comment rajouter une image */}
+        <div className={s.image}></div>
+        {/* <img src="../../public/img/bg-book.jpg" alt=""/> */}
+        <div className={s.content}>
+            <div className={s.header}>
+                <h1 className={s.h1}>study session</h1>
+                <p>it’s the break time now</p>
+            </div>
             <input
                 ref={inputRef}
                 type="text"
-                placeholder="billy"
+                placeholder="enter a name..."
                 onKeyDown={onKeyDown}
-                className={`${s.input} ${gaegu.className}`}
+                className={s.input}
             />
         </div>
-        <Image
-            src="/logo.svg"
-            width={300}
-            height={128}
-            alt="Picture of the author"
-        />
         {/* {error !== "" ? <p> {error} </p> : ""}; */}
     </div>
     );

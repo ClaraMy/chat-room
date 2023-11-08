@@ -194,7 +194,7 @@ const Home = () => {
     return( 
       <>
         <h1 className={s.title}>
-          study session // (date)
+          study session - (date) ʃ
         </h1>
         {error && (
           <Notification 
