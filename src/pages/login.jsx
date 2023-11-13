@@ -14,8 +14,6 @@ const Login = () => {
     const inputRef = useRef();
     const {push} = useRouter();
 
-    console.log(inputRef);
-
     const onKeyDown = (e) => {
         if (e.keyCode === 13) {
             localStorage.setItem('username', inputRef.current.value);

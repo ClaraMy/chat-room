@@ -33,7 +33,6 @@ const Home = () => {
     
 
       const onMessage = (message) => {
-        console.log("message received", message);
         // ❌ la variable message n'est pas un tableau
         // setMessages(message);
     
@@ -66,7 +65,6 @@ const Home = () => {
         const filteredArray = [...users].filter((_user) =>
           _user.userID !== _userID ? true : false
         );
-        console.log(filteredArray);
         setUsers(filteredArray);
       };
 
@@ -75,16 +73,13 @@ const Home = () => {
         localStorage.clear("sessionID");
         localStorage.setItem("error", 200);
         push ("/login");
-      }
+      };
 
       const scrollToBottom = () => {
         viewerRef.current.scrollTop = viewerRef.current.scrollHeight;
-        // console.log (viewerRef.current.scrollHeight);
       };
 
       const onError = ({code, error}) => {
-        console.log(code, error);
-
         let title = '';
         let content = '';
 
@@ -103,6 +98,12 @@ const Home = () => {
           content,
         })
       };
+
+      // const myUsername = 
+
+      console.log(users);
+      console.log(users.username);
+      console.log(socket.auth);
 
       const onPrivateMessage = ({content, from, to, username}) => {
          // check from which user the message came from
@@ -187,14 +188,10 @@ const Home = () => {
         scrollToBottom();
       }, [messages, selectedUser]);
 
-      useEffect(() => {
-        console.log(selectedUser);
-      }, [selectedUser])
-
     return( 
       <>
         <h1 className={s.title}>
-          study session - (date) ʃ
+        “Taking a break can lead to breakthroughs“
         </h1>
         {error && (
           <Notification 
@@ -255,7 +252,9 @@ const Home = () => {
             </div>
             <div className={s.sidebar}>
               <Timer/>
-              <Profile/>
+              <Profile
+                // username={}
+              />
             </div>
           </div>
         </div>
