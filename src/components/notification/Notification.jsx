@@ -11,9 +11,9 @@ const Notification = ({title, content, onClose}) => {
     
     return (
         <div className={s.notification}>
-            <div className={s.close} onClick={onClose}></div>
             <strong>{title}</strong>
             <p>{content}</p>
+            <div className={s.close} onClick={onClose}>X</div>
         </div>
     );
 };

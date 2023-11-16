@@ -91,8 +91,8 @@ const Home = () => {
 
         switch (code) {
           case 100:
-            title = `Erreur ${code} : Spam`;
-            content = "Thanks to not spam in the chat please!" 
+            title = `🌷 Erreur ${code} "Spam"`;
+            content = "Please do not spam in the chat!" 
             break;
 
           default:
