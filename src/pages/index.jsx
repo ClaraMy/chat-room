@@ -220,7 +220,7 @@ const Home = () => {
           </div>
           <div className={s.content__infos}>
             <div className={s.chat}>
-              <div ref={viewerRef} className={s.messages}>
+              <div ref={viewerRef} className={`${s.messages} ${s.customScrollbar}`}>
                   { selectedUser
                     ? selectedUser.messages.map((message, key) => {
                         return (
