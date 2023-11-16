@@ -48,10 +48,13 @@ const Home = () => {
         setMessages((oldMessages) => [...oldMessages, message]);
       };
 
+      // get all the messages already sent
       const getMessagesAtInit = (messagesAtInit) => {
         setMessages(messagesAtInit);
       }
 
+
+      // get all the users
       const getUsersAtInit = (_users) => {
         setUsers(_users);
       }
@@ -68,6 +71,7 @@ const Home = () => {
         setUsers(filteredArray);
       };
 
+      // if there is an error
       const onConnectionError = (err) => {
         localStorage.clear("username");
         localStorage.clear("sessionID");
@@ -75,10 +79,12 @@ const Home = () => {
         push ("/login");
       };
 
+      // for having the latest messages
       const scrollToBottom = () => {
         viewerRef.current.scrollTop = viewerRef.current.scrollHeight;
       };
 
+      // if there is an error, to set the title and the content
       const onError = ({code, error}) => {
         let title = '';
         let content = '';
@@ -86,7 +92,7 @@ const Home = () => {
         switch (code) {
           case 100:
             title = `Erreur ${code} : Spam`;
-            content = "tu suffis" 
+            content = "Thanks to not spam in the chat please!" 
             break;
 
           default:
@@ -99,15 +105,8 @@ const Home = () => {
         })
       };
 
-      // const myUsername = 
-
-      console.log(users);
-      console.log(users.username);
-      console.log(socket.auth);
-
       const onPrivateMessage = ({content, from, to, username}) => {
          // check from which user the message came from
-
         const userMessagingIndex = users.findIndex(
           (_user) => _user.userID === from
         );
@@ -125,8 +124,6 @@ const Home = () => {
 
          if (userMessaging.userID !== selectedUser?.userID) {
            userMessaging.hasNewMessages = true;
-          //  faire un compteur
-          // mettre à 0, faire +1 
          }
 
         const _users = [...users];
@@ -159,7 +156,7 @@ const Home = () => {
           const username = localStorage.getItem("username");
           socket.auth = { username };
           socket.connect();
-          //   // redirect to login page
+          //  redirect to login page
         } else {
           push("/login");
         }
@@ -258,13 +255,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
-
-        {/* cette annotation là c'est pour retirer le return en remplaçant les {} par () */}
-        {/* {messages.map((message, key)=> (
-            <div key={key}>{message.content}</div>
-        ))} */}
-
         
         <Commands/>
 
