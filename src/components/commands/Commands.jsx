@@ -8,6 +8,14 @@ const Commands = () => {
     setSounds({
       boom: new Audio("/assets/boom.mp3"),
       chef: new Audio("/assets/chef.mp3"),
+      church: new Audio("/assets/church.mp3"),
+      guitar: new Audio("/assets/guitar.mp3"),
+      marimba: new Audio("/assets/marimba.mp3"),
+      notification: new Audio("/assets/notification.mp3"),
+      piano: new Audio("/assets/piano.mp3"),
+      roaster: new Audio("/assets/roaster.mp3"),
+      school: new Audio("/assets/school.mp3"),
+      sheep: new Audio("/assets/sheep.mp3"),
     });
   }, []);
 
