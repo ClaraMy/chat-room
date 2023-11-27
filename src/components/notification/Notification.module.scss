@@ -1,14 +1,6 @@
+@import '../../styles/variables';
+
 .notification {
-    // width: 10vw;
-    // height: 10vh;
-    // background-color: grey;
-    // padding: 1rem;
-    // border-radius: 8px;
-
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-
     display: flex;
     margin: var(--spacer-xs, 16px) var(--spacer-xs, 16px);
     padding: var(--spacer-xxs, 8px) var(--spacer-xs, 16px);

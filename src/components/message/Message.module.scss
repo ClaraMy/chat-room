@@ -1,13 +1,10 @@
+@import '../../styles/variables';
+
 .message {
-    // transform: translateX(-100px);
-    // opacity: 0;
     display: flex;
     width: 100%;
 
     &__me {
-        // text-align: right;
-        // padding: 0 2rem ;
-        // transform: translateX(100px);
         justify-content: flex-end;
     }
 }
