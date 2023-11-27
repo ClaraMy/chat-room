@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { socket } from "@/utils/socket";
 import { useEffect, useRef, useState } from "react";
 import Input from "@/components/input/Input";
-import Timer from "@/components/timer/timer";
+import Timer from "@/components/timer/Timer";
 import Profile from "@/components/profile/Profile";
 import Commands from "@/components/commands/Commands";
 import Notification from "@/components/notification/Notification";
