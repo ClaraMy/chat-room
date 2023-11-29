@@ -40,7 +40,7 @@ New features :
 
 ### V3.0 (coming soon)
 New features : 
-- Choose a sound for the alarm among 10 differents
+- Choose a sound from 10 different ones for the alarm 
 - Do not disturb
 
 ## Do you need help?
