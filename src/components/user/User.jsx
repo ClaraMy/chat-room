@@ -7,7 +7,6 @@ const User = ({ index, user, selectedUser, setSelectedUser, resetNotification })
     const userRef = useRef();
 
     useEffect(() => {
-        console.log(useRef);
         // avec un delay
         // gsap.to(userRef.current, {
         //     opacity:1,
