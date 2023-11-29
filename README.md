@@ -1,8 +1,26 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Pomodoro study room
+*by Clara Many*
+
+Interested in working methods, organization and productivity, I decided to create this chat to help people focus on the tasks they have to do.
+
+It's based on a working method called “Pomodoro”. This method consists of working for 25 minutes, then taking a 5-minute break. After four work cycles, you can take a longer break of 15 to 30 minutes. The aim is to maintain concentration and improve productivity.
+
+Joining this chat allows people to motivate each other, help each other and chat during breaks. 
+
+Join now!
+
 ## Getting Started
 
-First, run the development server:
+First, run the development server: 
+(https://github.com/karljstn/iut-socket-server)
+
+```bash
+node index.js
+```
+
+Then, run the development project in another terminal:
 
 ```bash
 npm run dev
@@ -14,21 +32,18 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Updates
+### V2.0 (5th November 2023)
+New features : 
+- Timer
+- Log out
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### V3.0 (coming soon)
+New features : 
+- Choose a sound for the alarm among 10 differents
+- Do not disturb
 
-## Learn More
+## Do you need help?
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you have any problem, please contact me at:
+-   E-mail: clara.many@edu.univ-eiffel.fr
