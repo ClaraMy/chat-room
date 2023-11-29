@@ -14,7 +14,7 @@ Join now!
 ## Getting Started
 
 First, run the development server: 
-(https://github.com/karljstn/iut-socket-server)
+[https://github.com/karljstn/iut-socket-server](https://github.com/karljstn/iut-socket-server)
 
 ```bash
 node index.js
