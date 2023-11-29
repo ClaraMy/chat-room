@@ -1,14 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap');
 @import '../../styles/variables';
 
-.container {
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-    gap: var(--spacer-xxs, 8px);
-}
-
-.profile {
+.controls {
     display: flex;
     padding: var(--spacer-xxs, 8px) var(--spacer-xs, 16px);
     justify-content: center;
@@ -24,24 +16,5 @@
     p {
         font-weight: 700;
         margin: 0;
-    }
-}
-
-.controls {
-    display: flex;
-    padding: var(--spacer-xxs, 8px) var(--spacer-xs, 16px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 4px;
-    align-self: stretch;
-
-    border-radius: 8px;
-    background-color: var(--white, #FFFFFF);
-
-    p {
-        font-weight: 400;
-        margin: 0;
-        cursor: pointer;
     }
 }
