@@ -20,7 +20,7 @@ First, run the development server:
 node index.js
 ```
 
-Then, run the development project:
+Then, run the development project in another terminal:
 
 ```bash
 npm run dev
