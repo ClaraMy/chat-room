@@ -28,6 +28,10 @@
     padding: var(--spacer-xxs, 8px) var(--spacer-xs, 16px);
     gap: var(--spacer-xxs, 8px);
     width: fit-content;
+    max-width: 60vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     border-radius: 8px;
     background-color: var(--white, #FFFFFF);
